@@ -1,0 +1,76 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main section.game {
+  width: fit-content;
+  display: none;
+}
+
+main section.game div.generate {
+  display: grid;
+  gap: 12px;
+  background-color: rgb(12, 43, 68);
+  border-radius: 8px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 2px 4px;
+}
+
+main .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.3s;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+main .generate .box,
+main .card-image {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+main .generate .box {
+  width: 100px;
+  height: 150px;
+  padding: 8px;
+  background-color: #8fafca;
+  border-radius: 10px;
+}
+
+.rotate {
+  cursor: not-allowed !important;
+  animation: rotate 0.2s linear;
+  background-color: #5a7e9b;
+}
+
+.rotate img {
+  opacity: 1;
+}
+
+.back-rotate {
+  animation: back-rotate 0.2s linear;
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes back-rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(0deg) rotateY(-180deg);
+  }
+}
